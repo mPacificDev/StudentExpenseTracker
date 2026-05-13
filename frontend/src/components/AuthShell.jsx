@@ -16,8 +16,8 @@ export default function AuthShell({
 
       <div className="relative mx-auto grid min-h-[calc(100vh-3rem)] max-w-7xl overflow-hidden rounded-[32px] border border-white/10 bg-white/6 shadow-[0_28px_80px_rgba(0,0,0,0.24)] backdrop-blur md:grid-cols-[1.08fr_0.92fr]">
         <section className="auth-panel-copy flex flex-col justify-between p-8 text-white md:p-12">
-          <div className="space-y-8">
-            <BrandMark size="md" subtitle="AUCA CASE STUDY" />
+          <div className="space-y-7">
+            <BrandMark size="md" subtitle="STUDENT FINANCE PORTAL" tone="light" />
             <div className="max-w-xl">
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.32em] text-[var(--auca-gold-soft)]">
                 {eyebrow}
@@ -29,26 +29,22 @@ export default function AuthShell({
                 {subtitle}
               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="space-y-3">
               {highlights.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-[26px] border border-white/10 bg-white/8 p-5"
+                  className="flex items-start gap-4 rounded-[24px] border border-white/10 bg-white/8 p-4"
                 >
-                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(241,182,28,0.18)] text-[var(--auca-gold-soft)]">
+                  <div className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[rgba(241,182,28,0.18)] text-[var(--auca-gold-soft)]">
                     {item.icon}
                   </div>
-                  <h2 className="mb-2 text-base font-bold">{item.title}</h2>
-                  <p className="text-sm leading-6 text-white/72">{item.description}</p>
+                  <div>
+                    <h2 className="mb-1 text-base font-bold">{item.title}</h2>
+                    <p className="text-sm leading-6 text-white/72">{item.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="mt-10 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/62">
-            <span className="rounded-full border border-white/12 px-3 py-2">Kigali Campus</span>
-            <span className="rounded-full border border-white/12 px-3 py-2">Secure Access</span>
-            <span className="rounded-full border border-white/12 px-3 py-2">Student Finance Records</span>
           </div>
         </section>
 

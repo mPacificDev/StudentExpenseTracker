@@ -99,61 +99,6 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        <section className="surface-card rounded-[30px] p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--auca-blue)]">Security & Preferences</p>
-          <h3 className="mt-3 display-serif text-4xl leading-none text-[var(--auca-navy)]">Settings</h3>
-
-          <div className="mt-8 space-y-4">
-            <SettingRow
-              icon={LuLockKeyhole}
-              title="Change Password"
-              note="Update your password regularly to keep your finance workspace secure."
-              action={(
-                <button
-                  onClick={() => alert('Change password feature coming soon!')}
-                  className="rounded-xl bg-white px-4 py-2 text-xs font-bold text-[var(--auca-navy)]"
-                >
-                  Change
-                </button>
-              )}
-            />
-
-            <SettingRow
-              icon={LuShieldCheck}
-              title="Two-Factor Authentication"
-              note="Strengthen your sign-in flow with an additional verification layer."
-              action={(
-                <button
-                  onClick={() => alert('2FA feature coming soon!')}
-                  className="rounded-xl bg-white px-4 py-2 text-xs font-bold text-[var(--auca-navy)]"
-                >
-                  Enable
-                </button>
-              )}
-            />
-
-            <SettingRow
-              icon={LuBell}
-              title="Email Notifications"
-              note="Receive monthly summaries and important activity reminders."
-              action={(
-                <button
-                  onClick={() => setNotifications((value) => !value)}
-                  className={`relative inline-flex h-7 w-12 items-center rounded-full transition-colors ${
-                    notifications ? 'bg-[var(--auca-navy)]' : 'bg-[rgba(33,58,107,0.18)]'
-                  }`}
-                >
-                  <span
-                    className={`inline-block h-5 w-5 rounded-full bg-white shadow transition-transform ${
-                      notifications ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              )}
-            />
-          </div>
-        </section>
-
         <section className="grid gap-5 md:grid-cols-[0.8fr_1.2fr]">
           <div className="surface-card rounded-[30px] p-6">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--auca-blue)]">Session</p>

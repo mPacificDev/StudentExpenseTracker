@@ -55,7 +55,7 @@ export default function Layout({ children }) {
   return (
     <div className="app-shell flex min-h-screen">
       <aside
-        className={`relative hidden shrink-0 overflow-hidden bg-[linear-gradient(180deg,var(--auca-navy-strong),var(--auca-navy))] text-white lg:flex lg:flex-col ${
+        className={`sticky top-0 hidden h-screen shrink-0 self-start overflow-hidden bg-[linear-gradient(180deg,var(--auca-navy-strong),var(--auca-navy))] text-white lg:flex lg:flex-col ${
           collapsed ? 'lg:w-[112px]' : 'lg:w-[320px]'
         }`}
       >
@@ -63,9 +63,15 @@ export default function Layout({ children }) {
 
         <div className="relative flex items-center justify-between px-6 py-7">
           {!collapsed ? (
-            <BrandMark size="sm" subtitle="AUCA CASE STUDY" />
+            <BrandMark size="sm" subtitle="STUDENT FINANCE PORTAL" tone="light" />
           ) : (
-            <div className="brand-mark h-12 w-12 text-sm font-extrabold tracking-[0.25em]">AU</div>
+            <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-[0_14px_30px_rgba(22,40,74,0.18)]">
+              <img
+                src="/auca-logo.png"
+                alt="AUCA logo"
+                className="h-full w-full rounded-full object-cover"
+              />
+            </div>
           )}
           <button
             onClick={() => setCollapsed((value) => !value)}
@@ -75,29 +81,6 @@ export default function Layout({ children }) {
             {collapsed ? <LuChevronRight className="h-5 w-5" /> : <LuChevronLeft className="h-5 w-5" />}
           </button>
         </div>
-
-        {!collapsed && (
-          <div className="relative mx-6 rounded-[28px] border border-white/10 bg-white/7 p-5">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--auca-gold-soft)]">
-                  Active Workspace
-                </p>
-                <h2 className="mt-2 display-serif text-3xl leading-none">Financial Control</h2>
-                <p className="mt-3 text-sm leading-6 text-white/72">
-                  Track tuition-related spending, living costs, and monthly balance with a cleaner AUCA-centered interface.
-                </p>
-              </div>
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[rgba(241,182,28,0.18)] text-[var(--auca-gold-soft)]">
-                <LuBadgeDollarSign className="h-6 w-6" />
-              </div>
-            </div>
-            <div className="mt-5 grid grid-cols-2 gap-3">
-              <StatusPill label="Campus" value="Masoro Hill" />
-              <StatusPill label="Access" value="Protected" />
-            </div>
-          </div>
-        )}
 
         <nav className="relative mt-6 flex-1 px-4">
           <div className="space-y-2">

@@ -8,13 +8,13 @@ import AuthShell from '../components/AuthShell';
 
 const highlights = [
   {
-    title: 'Institutional Identity',
-    description: 'A refined AUCA-inspired experience built around credibility, clarity, and academic professionalism.',
+    title: 'Secure access',
+    description: 'Sign in to manage your records and review your monthly financial activity.',
     icon: <LuShieldCheck className="h-5 w-5" />,
   },
   {
-    title: 'Daily Visibility',
-    description: 'Track transport, meals, housing, and academic costs without losing the monthly picture.',
+    title: 'Simple overview',
+    description: 'View expenses, income, and key reports from one student-friendly workspace.',
     icon: <LuWallet className="h-5 w-5" />,
   },
 ];
@@ -59,7 +59,7 @@ export default function LoginPage() {
     <AuthShell
       eyebrow="Secure Student Access"
       title="Manage your finances with discipline."
-      subtitle="Access a cleaner financial dashboard tailored for the AUCA case study, with a stronger institutional tone and a sharper daily workflow."
+      subtitle="Access your student finance dashboard, review your records, and keep your monthly spending under control."
       highlights={highlights}
       footer={(
         <p className="mt-6 text-center text-sm text-[var(--auca-muted)]">

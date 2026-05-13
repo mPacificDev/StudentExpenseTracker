@@ -1,13 +1,17 @@
-export default function BrandMark({ size = 'lg', subtitle = 'STUDENT FINANCE PORTAL' }) {
+export default function BrandMark({
+  size = 'lg',
+  subtitle = 'STUDENT FINANCE PORTAL',
+  tone = 'dark',
+}) {
   const sizeMap = {
     sm: {
-      outer: 'w-11 h-11 text-[0.72rem]',
+      outer: 'h-11 w-11',
       title: 'text-lg',
       subtitle: 'text-[0.62rem]',
       gap: 'gap-3',
     },
     md: {
-      outer: 'w-14 h-14 text-[0.84rem]',
+      outer: 'h-14 w-14',
       title: 'text-[1.45rem]',
       subtitle: 'text-[0.68rem]',
       gap: 'gap-3.5',
@@ -21,17 +25,23 @@ export default function BrandMark({ size = 'lg', subtitle = 'STUDENT FINANCE POR
   };
 
   const config = sizeMap[size] || sizeMap.lg;
+  const titleTone = tone === 'light' ? 'text-white' : 'text-[var(--auca-navy)]';
+  const subtitleTone = tone === 'light' ? 'text-white/70' : 'text-[var(--auca-blue)]';
 
   return (
     <div className={`flex items-center ${config.gap}`}>
-      <div className={`brand-mark ${config.outer} shrink-0 font-extrabold tracking-[0.28em]`}>
-        AU
+      <div className={`flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-white p-1.5 shadow-[0_14px_30px_rgba(22,40,74,0.18)] ${config.outer}`}>
+        <img
+          src="/auca-logo.png"
+          alt="AUCA logo"
+          className="h-full w-full rounded-full object-cover"
+        />
       </div>
       <div className="min-w-0">
-        <p className={`display-serif leading-none text-[var(--auca-navy)] ${config.title}`}>
+        <p className={`display-serif leading-none ${titleTone} ${config.title}`}>
           Student Expense Tracker
         </p>
-        <p className={`mt-1 font-semibold tracking-[0.24em] text-[var(--auca-blue)] uppercase ${config.subtitle}`}>
+        <p className={`mt-1 font-semibold tracking-[0.24em] uppercase ${subtitleTone} ${config.subtitle}`}>
           {subtitle}
         </p>
       </div>

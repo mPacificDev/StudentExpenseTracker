@@ -17,13 +17,13 @@ import AuthShell from '../components/AuthShell';
 
 const highlights = [
   {
-    title: 'Case Study Ready',
-    description: 'A more grounded institutional presentation aligned with AUCA rather than a generic finance app style.',
+    title: 'Create your account',
+    description: 'Register once and start tracking your income, expenses, and balance in one place.',
     icon: <LuBookOpenText className="h-5 w-5" />,
   },
   {
-    title: 'Protected Records',
-    description: 'Authentication remains secure while the interface becomes more credible, polished, and easier to trust.',
+    title: 'Protected records',
+    description: 'Your account provides secure access to personal financial records and reports.',
     icon: <LuShieldCheck className="h-5 w-5" />,
   },
 ];
@@ -95,7 +95,7 @@ export default function RegisterPage() {
     <AuthShell
       eyebrow="Create Student Access"
       title="Open your personal finance workspace."
-      subtitle="Register once and keep a disciplined record of spending, category trends, and monthly balance through a stronger campus-branded experience."
+      subtitle="Create your account to start recording expenses, income, and monthly summaries in a clean student finance dashboard."
       highlights={highlights}
       footer={(
         <p className="mt-6 text-center text-sm text-[var(--auca-muted)]">
