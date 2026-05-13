@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --auca-navy: #213a6b;
+  --auca-navy-strong: #16284a;
+  --auca-blue: #2f5ea9;
+  --auca-gold: #f1b61c;
+  --auca-gold-soft: #f6d46b;
+  --auca-paper: #f7f4ec;
+  --auca-ink: #172033;
+  --auca-muted: #687489;
+  --auca-line: rgba(33, 58, 107, 0.12);
+  --auca-shadow: 0 22px 50px rgba(22, 40, 74, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(241, 182, 28, 0.1), transparent 34%),
+    linear-gradient(180deg, #f8f6f1 0%, #eef2f8 100%);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--auca-ink);
+  font-family: 'Manrope', sans-serif;
+  background: transparent;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+::selection {
+  background: rgba(241, 182, 28, 0.25);
+}
+
+.display-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.app-shell {
+  background:
+    radial-gradient(circle at top left, rgba(241, 182, 28, 0.16), transparent 26%),
+    linear-gradient(180deg, #f8f6f1 0%, #eef3fa 100%);
+}
+
+.surface-panel {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--auca-line);
+  box-shadow: var(--auca-shadow);
+  backdrop-filter: blur(14px);
+}
+
+.surface-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--auca-line);
+  box-shadow: 0 10px 28px rgba(22, 40, 74, 0.08);
+}
+
+.soft-ring:focus {
+  outline: none;
+  border-color: rgba(47, 94, 169, 0.45);
+  box-shadow: 0 0 0 4px rgba(47, 94, 169, 0.12);
+}
+
+.auth-stage {
+  background:
+    radial-gradient(circle at top left, rgba(241, 182, 28, 0.22), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(47, 94, 169, 0.18), transparent 26%),
+    linear-gradient(135deg, #152746 0%, #213a6b 52%, #2f5ea9 100%);
+}
+
+.auth-grid {
+  min-height: 100vh;
+}
+
+.auth-panel-copy {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    linear-gradient(180deg, rgba(241, 182, 28, 0.08), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.brand-mark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(145deg, var(--auca-blue), var(--auca-navy));
+  color: white;
+  box-shadow: 0 14px 30px rgba(22, 40, 74, 0.26);
+}
+
+.brand-mark::after {
+  content: '';
+  position: absolute;
+  inset: 7%;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.nav-active {
+  background: linear-gradient(135deg, var(--auca-navy), var(--auca-blue));
+  color: white;
+  box-shadow: 0 14px 30px rgba(33, 58, 107, 0.24);
+}
+
+.nav-idle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.table-header {
+  background: linear-gradient(180deg, rgba(33, 58, 107, 0.05), rgba(33, 58, 107, 0.02));
+}
+
+.modal-backdrop {
+  background: rgba(16, 24, 40, 0.5);
+  backdrop-filter: blur(6px);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeUp 0.45s ease forwards;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.38;
+  }
+}
+
+.pulse-dot {
+  animation: pulse 1.35s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(33, 58, 107, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(33, 58, 107, 0.24);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(33, 58, 107, 0.4);
+}

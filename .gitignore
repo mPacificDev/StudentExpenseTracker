@@ -1,0 +1,13 @@
+# Root-level ignore rules for the full-stack project
+.env
+.env.*
+!.env.example
+
+frontend/node_modules/
+frontend/dist/
+backend/target/
+
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
